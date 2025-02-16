@@ -2,9 +2,9 @@ import { Route, Routes, useLocation } from 'react-router-dom';
 import './App.css'
 import MenuNavigation from './components/MenuNavigation'
 import WebFont from 'webfontloader'
-import Home from './pages/Home';
-import Emails from './pages/Emails';
-import Config from './pages/Config';
+import Home from './pages/Home/Home';
+import Emails from './pages/Emails/Emails';
+import Config from './pages/Config/Config';
 
 WebFont.load({
   google: {

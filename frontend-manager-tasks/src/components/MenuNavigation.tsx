@@ -1,6 +1,5 @@
 import { Icon } from "@iconify/react/dist/iconify.js";
 import BtnNavNavigation from "./nav-navigation/BtnNavNavigation";
-import Etiqueta from "./nav-navigation/Etiqueta";
 import { Link, useLocation } from "react-router-dom";
 import { useEffect } from "react";
 
@@ -33,21 +32,9 @@ const MenuNavigation = () => {
         </Link>
 
         <Link to={'/config'} className={"w-full"}>
-          <BtnNavNavigation text="Config" icon="lets-icons:setting-fill" />
+          <BtnNavNavigation text="Config" icon="fluent:settings-32-regular" />
         </Link>
-
-        <div className="flex mt-10 mb-2">
-          <Icon icon="line-md:filter-twotone" width="28" height="28" color="gray" />
-          <span className="font-bold">Etiquetas</span>
-        </div>
-
-        <Etiqueta text="Urgente" color="red"/>
-        <Etiqueta text="Importante" color="orange"/>
-        <Etiqueta text="Pendiente" color="pink"/>
-
       </section>
-
-
     </>
   );
 }

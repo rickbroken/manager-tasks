@@ -1,10 +1,10 @@
 import { Icon } from "@iconify/react/dist/iconify.js";
 import { ContTasksProps } from "./interfaces/home.interface";
 
-const ContTasks = ({children, title, icon, color}: ContTasksProps) => {
+const ContTasks = ({children, title, icon, color, setAddingNewTask }: ContTasksProps) => {
   return (
     <>
-      <div className="cont-tasks w-4/12 bg-white rounded-xl pt-5 h-[95vh] flex flex-col gap-5 items-center overflow-hidden relative">
+      <div className="cont-tasks w-6/12 bg-white rounded-xl pt-5 h-[95vh] flex flex-col gap-5 items-center  relative">
         <div className="flex gap-2 items-center">
           <Icon icon={icon} color={color} width="24" height="24" />
           <p>{title}</p>
@@ -25,10 +25,11 @@ const ContTasks = ({children, title, icon, color}: ContTasksProps) => {
           icon="zondicons:add-outline"
           width="32"
           height="32"
+          onClick={() => setAddingNewTask && setAddingNewTask(true) }
         />
         }
 
-        <div className="w-full h-full overflow-y-auto px-5 mt-5">
+        <div className="w-full h-full  px-5 mt-5 overflow-y-auto pb-10">
           {children}
         </div>
       </div>
