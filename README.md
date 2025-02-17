@@ -15,7 +15,7 @@ Manager Tasks es una aplicación para gestionar tareas, desarrollada con **React
 
 ```bash
 # Clonar el proyecto
-git clone https://github.com/tu_usuario/manager-tasks.git
+git clone https://github.com/rickbroken/manager-tasks.git
 cd manager-tasks
 ```
 
