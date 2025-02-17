@@ -4,7 +4,7 @@ import MenuNavigation from './components/MenuNavigation'
 import WebFont from 'webfontloader'
 import Home from './pages/Home/Home';
 import Emails from './pages/Emails/Emails';
-import Config from './pages/Config/Config';
+import Settings from './pages/Settings/Settings';
 
 WebFont.load({
   google: {
@@ -34,8 +34,8 @@ function App() {
           <Route path='/emails' element={
             <Emails />
           } />
-          <Route path='/config' element={
-            <Config />
+          <Route path='/settings' element={
+            <Settings />
           } />
           <Route path='*' element={
             <Home />

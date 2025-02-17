@@ -6,6 +6,11 @@ export interface GetInterfaceTask {
   createdAt?: string;
   updatedAt?: string;
   __v?: number;
+  tags: {
+    id: string;
+    name: string;
+    colorTag: string;
+  }[];
 }
 
 export interface Headers {

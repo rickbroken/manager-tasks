@@ -8,6 +8,13 @@ export interface ContTaskProps {
   colorTag: string;
   BgColor: string;
   done: boolean;
+  tags: InterfaceTags[];
+}
+
+export interface InterfaceTags {
+  id: string;
+  name: string;
+  colorTag: string;
 }
 
 export interface ContTasksProps {
@@ -26,7 +33,6 @@ export interface InterfaceCreateTask {
   title: string;
   description: string;
 }
-
 
 export interface InterfaceEditTask {
   title: string;

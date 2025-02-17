@@ -9,8 +9,8 @@ const BtnNavNavigation = ({text, icon}: InterfaceBtnNav) => {
   return (
     <>
       <div className={`
-        flex 
-        justify-center
+        flex
+        px-20
         items-center
         w-full
         my-1

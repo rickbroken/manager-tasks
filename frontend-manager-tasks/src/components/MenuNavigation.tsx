@@ -4,7 +4,6 @@ import { Link, useLocation } from "react-router-dom";
 import { useEffect } from "react";
 
 const MenuNavigation = () => {
-
   const location = useLocation();
 
   // cuando este en / redireccionar a /home
@@ -22,7 +21,7 @@ const MenuNavigation = () => {
           <span className="font-bold text-xl text-gray-700">MANAGER TASKS</span>
           <span>RickBroken</span>
         </div>
-        
+
         <Link to={'/home'} className={"w-full"}>
           <BtnNavNavigation text="Home" icon="fluent:board-28-regular" />
         </Link>
@@ -31,8 +30,8 @@ const MenuNavigation = () => {
           <BtnNavNavigation text="Emails" icon="weui:email-outlined" />
         </Link>
 
-        <Link to={'/config'} className={"w-full"}>
-          <BtnNavNavigation text="Config" icon="fluent:settings-32-regular" />
+        <Link to={'/settings'} className={"w-full"}>
+          <BtnNavNavigation text="Settings" icon="fluent:settings-32-regular" />
         </Link>
       </section>
     </>

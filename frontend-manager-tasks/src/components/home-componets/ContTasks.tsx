@@ -4,7 +4,7 @@ import { ContTasksProps } from "./interfaces/home.interface";
 const ContTasks = ({children, title, icon, color, setAddingNewTask }: ContTasksProps) => {
   return (
     <>
-      <div className="cont-tasks w-6/12 bg-white rounded-xl pt-5 h-[95vh] flex flex-col gap-5 items-center  relative">
+      <div className="cont-tasks w-6/12 bg-white rounded-xl pt-5 h-[86vh] flex flex-col gap-5 items-center  relative">
         <div className="flex gap-2 items-center">
           <Icon icon={icon} color={color} width="24" height="24" />
           <p>{title}</p>

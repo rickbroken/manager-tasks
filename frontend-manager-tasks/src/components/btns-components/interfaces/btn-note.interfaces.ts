@@ -22,6 +22,16 @@ export interface InterfaceBtnCompletTaskProps {
 }
 
 export interface IterfaceTagTask {
+  id: string;
   text: string;
-  colorTag?: string;
+  colorTag: string;
+  valueTaskEdit: GetInterfaceTask;
+}
+
+export interface InterfaceBtnMenuAddTagsProps {
+  id: string;
+  name: string;
+  colorIcon: string;
+  valueTaskEdit: GetInterfaceTask;
+  setOpenAddTags: Dispatch<SetStateAction<boolean>>;
 }
