@@ -2,7 +2,7 @@ import axios, { AxiosResponse } from "axios";
 import { GetInterfaceTask, TaskApiResponse } from "./interfaces/axios.interfaces";
 import { InterfaceCreateTask } from "../components/home-componets/interfaces/home.interface";
 
-const API = 'http://localhost:3000/api';
+const API = import.meta.env.VITE_DEV === 'true' ? import.meta.env.VITE_URL_API_DEV : import.meta.env.VITE_URL_API_PROD;
 
 const taskApi = axios.create({
   baseURL: API,
