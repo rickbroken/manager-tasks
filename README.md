@@ -35,7 +35,7 @@ cd backend-manager-tasks
    MONGO_USERNAME=daironquebrada
    PORT=8080
    DEFAULT_LIMIT=5
-   DEV=false
+   DEV=true
    ```
 3. Levantar el backend:
    ```bash
