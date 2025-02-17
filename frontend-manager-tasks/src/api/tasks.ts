@@ -4,6 +4,8 @@ import { InterfaceCreateTask } from "../components/home-componets/interfaces/hom
 
 const API = import.meta.env.VITE_DEV === 'true' ? import.meta.env.VITE_URL_API_DEV : import.meta.env.VITE_URL_API_PROD;
 
+console.log(import.meta.env.VITE_DEV);
+
 const taskApi = axios.create({
   baseURL: API,
   headers: {
