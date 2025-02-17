@@ -9,6 +9,7 @@ import {
   Param,
   Post,
   Put,
+  Query,
 } from '@nestjs/common';
 import { CreateTaskDto } from 'src/dto/create-task.dto';
 import { UpdateTaskDto } from 'src/dto/update-task.dto';
@@ -19,8 +20,8 @@ export class TasksController {
   constructor(private taskService: TasksService) {}
 
   @Get()
-  finAll() {
-    return this.taskService.finAll();
+  finAll(@Query('search') search?: string, @Query('tag') tag?: string) {
+    return this.taskService.findAll(search, tag);
   }
 
   @Get(':id')

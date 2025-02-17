@@ -9,8 +9,21 @@ import { Task } from 'src/schemas/task.schema';
 export class TasksService {
   constructor(@InjectModel(Task.name) private taskModel: Model<Task>) {}
 
-  finAll() {
-    return this.taskModel.find();
+  async findAll(search?: string, tag?: string): Promise<Task[]> {
+    const filter: { [key: string]: any } = {};
+
+    if (search) {
+      filter.$or = [
+        { title: { $regex: search, $options: 'i' } },
+        { description: { $regex: search, $options: 'i' } },
+      ];
+    }
+
+    if (tag) {
+      filter.tags = { $elemMatch: { name: { $regex: tag, $options: 'i' } } };
+    }
+
+    return this.taskModel.find(filter).exec();
   }
 
   create(task: CreateTaskDto) {

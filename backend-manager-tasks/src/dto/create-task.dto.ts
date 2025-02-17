@@ -12,4 +12,11 @@ export class CreateTaskDto {
   @IsBoolean()
   @IsOptional()
   done?: boolean;
+
+  @IsOptional()
+  tags?: {
+    id: string;
+    name: string;
+    colorTag: string;
+  }[];
 }

@@ -20,6 +20,15 @@ export class Task {
     default: false,
   })
   done: boolean;
+
+  @Prop({
+    default: [],
+  })
+  tags: {
+    id: string;
+    name: string;
+    colorTag: string;
+  }[];
 }
 
 export const TaskSchema = SchemaFactory.createForClass(Task);

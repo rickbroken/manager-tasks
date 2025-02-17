@@ -12,4 +12,11 @@ export class UpdateTaskDto {
   @IsOptional()
   @IsBoolean()
   done?: boolean;
+
+  @IsOptional()
+  tags?: {
+    id: string;
+    name: string;
+    colorTag: string;
+  }[];
 }
