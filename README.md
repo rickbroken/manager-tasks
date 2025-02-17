@@ -42,7 +42,7 @@ cd backend-manager-tasks
    npm run start:dev
    ```
 
-🔹 **Backend disponible en:** `http://localhost:5000`
+🔹 **Backend disponible en:** `http://localhost:8080/api`
 
 ### 🌐 3. Configurar el Frontend
 
