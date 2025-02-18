@@ -15,15 +15,28 @@ import { CreateTaskDto } from 'src/dto/create-task.dto';
 import { UpdateTaskDto } from 'src/dto/update-task.dto';
 import { TasksService } from 'src/services/tasks.service';
 
+/**
+ * Controlador de tareas y se crea la ruta para acceder a la api de tareas en general
+ */
 @Controller('tasks')
 export class TasksController {
   constructor(private taskService: TasksService) {}
-
+  /**
+   * Metodo para obtener todas las tareas
+   * @param search
+   * @param tag
+   * @returns
+   */
   @Get()
   finAll(@Query('search') search?: string, @Query('tag') tag?: string) {
     return this.taskService.findAll(search, tag);
   }
 
+  /**
+   * Metodo para obtener una tarea por id
+   * @param id
+   * @returns
+   */
   @Get(':id')
   async findOne(@Param('id') id: string) {
     try {
@@ -36,6 +49,11 @@ export class TasksController {
     }
   }
 
+  /**
+   * Metodo para crear una tarea, se recibe el body con los datos de la tarea
+   * @param body
+   * @returns
+   */
   @Post()
   async create(@Body() body: CreateTaskDto) {
     try {
@@ -52,6 +70,11 @@ export class TasksController {
     }
   }
 
+  /**
+   * Metodo para eliminar una tarea por id
+   * @param id
+   * @returns
+   */
   @Delete(':id')
   @HttpCode(200)
   async remove(@Param('id') id: string) {
@@ -67,6 +90,12 @@ export class TasksController {
     }
   }
 
+  /**
+   * Metodo para actualizar una tarea por id
+   * @param id
+   * @param body
+   * @returns
+   */
   @Put(':id')
   async update(@Param('id') id: string, @Body() body: UpdateTaskDto) {
     try {
