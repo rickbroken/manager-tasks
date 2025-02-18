@@ -92,7 +92,7 @@ const Home = () => {
 
             {addingNewTask && <FormAddTask setAddingNewTask={setAddingNewTask} />}
 
-            {isLoading && <p>Loading...</p>}
+            {isLoading && <div className="w-full flex justify-center"><Icon icon="codex:loader" color="blue" width="50" height="50" /></div>}
             {isError && tasks?.length === 0 && <p>Error en la peticion</p>}
             {!isLoading && !isError && tasks?.length === 0 && <p className="text-center italic">No hay tareas :)</p>}
             {tasks?.map((task: GetInterfaceTask) => {
@@ -114,7 +114,7 @@ const Home = () => {
           </ContTasks>
 
           <ContTasks title="TERMINADAS" icon="ix:certificate-success" color="#00bf02">
-            {isLoading && <p>Loading...</p>}
+            {isLoading && <div className="w-full flex justify-center"><Icon icon="codex:loader" color="blue" width="50" height="50" /></div>}
             {isError && tasks?.length === 0 && <p>Error en la peticion</p>}
             {!isLoading && !isError && tasks?.length === 0 && <p className="text-center italic">No hay tareas :)</p>}
             {tasks?.map((task: GetInterfaceTask) => {
