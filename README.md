@@ -28,11 +28,11 @@ cd backend-manager-tasks
 1. Instalar dependencias:
    ```bash
    npm install
-   ```
+   ``` 
 2. Crear un archivo `.env` en la raíz con la siguiente estructura:
    ```ini
    MONGODB='URL DE PRODUCCION SECRETA'
-   MONGO_USERNAME=daironquebrada
+   MONGO_USERNAME=username
    PORT=8080
    DEFAULT_LIMIT=5
    DEV=true
