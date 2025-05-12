@@ -4,7 +4,7 @@ Manager Tasks es una aplicación para gestionar tareas, desarrollada con **React
 
 🌐 **Demo en producción:**
 
-- **Frontend:** [Manager Tasks en Vercel](https://manager-tasks-one.vercel.app/#/home)
+- **Frontend:** [Manager Tasks en Vercel](https://manager-tasks-chi.vercel.app/#/home)
 - **Backend:** [Manager Tasks en Railway](https://manager-tasks-production.up.railway.app)
 
 ---
