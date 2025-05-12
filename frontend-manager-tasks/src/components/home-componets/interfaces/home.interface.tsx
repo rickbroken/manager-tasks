@@ -6,7 +6,7 @@ export interface ContTaskProps {
   description: string;
   date: string;
   colorTag: string;
-  BgColor: string;
+  BgColor: string
   done: boolean;
   tags: InterfaceTags[];
 }
