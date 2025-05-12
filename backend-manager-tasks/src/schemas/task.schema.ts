@@ -17,6 +17,12 @@ export class Task {
   description: string;
 
   @Prop({
+    required: true,
+    default: 'ricardo',
+  })
+  author: string;
+
+  @Prop({
     default: false,
   })
   done: boolean;

@@ -96,7 +96,7 @@ const Home = () => {
             {isError && tasks?.length === 0 && <p>Error en la peticion</p>}
             {!isLoading && !isError && tasks?.length === 0 && <p className="text-center italic">No hay tareas :)</p>}
             {tasks?.map((task: GetInterfaceTask) => {
-              if (!task.done && task.author === 'ricardo') {
+              if (!task.done && task.author === 'daniel') {
                 return <ContTask
                   key={task._id}
                   id={task._id as string}
@@ -118,7 +118,7 @@ const Home = () => {
             {isError && tasks?.length === 0 && <p>Error en la peticion</p>}
             {!isLoading && !isError && tasks?.length === 0 && <p className="text-center italic">No hay tareas :)</p>}
             {tasks?.map((task: GetInterfaceTask) => {
-              if (task.done && task.author === 'ricardo') {
+              if (task.done && task.author === 'daniel') {
                 return <ContTask
                   key={task._id}
                   id={task._id as string}

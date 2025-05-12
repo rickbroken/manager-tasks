@@ -4,6 +4,7 @@ export interface ContTaskProps {
   id: string;
   title: string;
   description: string;
+  author?: string;
   date: string;
   colorTag: string;
   BgColor: string
@@ -32,12 +33,13 @@ export interface FormAddTaskProps {
 export interface InterfaceCreateTask {
   title: string;
   description: string;
-  author?: string;
+  author: string;
 }
 
 export interface InterfaceEditTask {
   title: string;
   description: string;
+  author?: string;
   done?: boolean;
   _id?: string;
   createdAt?: string;

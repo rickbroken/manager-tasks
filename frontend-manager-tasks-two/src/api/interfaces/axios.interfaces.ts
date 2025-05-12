@@ -1,8 +1,8 @@
 export interface GetInterfaceTask {
   title: string;
   description: string;
-  done?: boolean;
   author?: string;
+  done?: boolean;
   _id?: string;
   createdAt?: string;
   updatedAt?: string;

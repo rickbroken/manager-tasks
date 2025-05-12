@@ -9,7 +9,7 @@ const FormAddTask = ({setAddingNewTask}: FormAddTaskProps) => {
   const { addTask } = useTasks();
 
   const handleChange = (e: ChangeEvent<HTMLInputElement | HTMLTextAreaElement>) => {
-    setTask({ ...task, [e.target.name]: e.target.value, author: 'ricardo' });
+    setTask({ ...task, [e.target.name]: e.target.value, author: 'daniel' });
   }
 
   const handleSubmit = async (e: FormEvent<HTMLFormElement>) => {
